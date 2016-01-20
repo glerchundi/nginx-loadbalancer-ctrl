@@ -2,4 +2,4 @@
 
 with-contenv
 s6-envuidgid nginx
-kube2nginx
+kube2nginx --nginx-template-path=/etc/nginx/nginx.conf.tmpl
