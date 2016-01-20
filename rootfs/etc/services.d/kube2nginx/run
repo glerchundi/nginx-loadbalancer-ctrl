@@ -1,5 +1,10 @@
 #!/usr/bin/execlineb -P
 
 with-contenv
-s6-setuidgid nginx
-kube2nginx --nginx-template-path=/etc/nginx/nginx.conf.tmpl
+s6-envuidgid nginx
+multisubstitute
+{
+  importas -u uid UID
+  importas -u gid GID
+}
+kube2nginx --nginx-src=/etc/nginx/nginx.conf.tmpl --nginx-dst-uid=${uid} --nginx-dst-gid=${gid}
