@@ -38,8 +38,8 @@ events {
     listen {{.data.address}} ssl;
 
     ssl on;
-    ssl_certificate           /etc/nginx/certs/{{base .host}}.crt;
-    ssl_certificate_key       /etc/nginx/certs/{{base .host}}.key;
+    ssl_certificate           /etc/nginx/certs/{{base .host}}/cert.crt;
+    ssl_certificate_key       /etc/nginx/certs/{{base .host}}/cert.key;
 
     # enable session resumption to improve https performance
     # http://vincent.bernat.im/en/blog/2011-ssl-session-reuse-rfc5077.html
@@ -47,7 +47,7 @@ events {
     ssl_session_timeout       5m;
 
     # Diffie-Hellman parameter for DHE ciphersuites, recommended 2048 bits
-    ssl_dhparam               /etc/nginx/certs/dhparam.pem;
+    ssl_dhparam               /etc/nginx/certs/dh/dhparam.pem;
 
     # enables server-side protection from BEAST attacks
     # http://blog.ivanristic.com/2013/09/is-beast-still-a-threat.html
