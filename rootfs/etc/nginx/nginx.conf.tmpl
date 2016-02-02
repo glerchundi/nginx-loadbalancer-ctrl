@@ -63,7 +63,7 @@ events {
     # http://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox/
     ssl_stapling on;
     ssl_stapling_verify off;
-    ssl_trusted_certificate /etc/nginx/certs/{{base .host}}.crt;
+    ssl_trusted_certificate /etc/nginx/certs/{{base .host}}/cert.crt;
 
     # config to enable HSTS(HTTP Strict Transport Security) https://developer.mozilla.org/en-US/docs/Security/HTTP_Strict_Transport_Security
     # to avoid ssl stripping https://en.wikipedia.org/wiki/SSL_stripping#SSL_stripping
