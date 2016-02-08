@@ -9,7 +9,7 @@ MAINTAINER Gorka Lerchundi Osa <glertxundi@gmail.com>
 RUN apk-install ca-certificates nginx=1.8.0-r3
 
 # kube2nginx
-ADD https://github.com/glerchundi/kube2nginx/releases/download/v0.4.0/kube2nginx-linux-amd64 /usr/bin/kube2nginx
+ADD https://github.com/glerchundi/kube2nginx/releases/download/v0.4.1/kube2nginx-linux-amd64 /usr/bin/kube2nginx
 RUN chmod 0755 /usr/bin/kube2nginx
 
 ##
