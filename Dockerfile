@@ -6,7 +6,7 @@ MAINTAINER Gorka Lerchundi Osa <glertxundi@gmail.com>
 ##
 
 # nginx
-RUN apk-install ca-certificates nginx=1.8.0-r3
+RUN apk-install ca-certificates nginx=1.8.1-r0
 
 # kube2nginx
 ADD https://github.com/glerchundi/kube2nginx/releases/download/v0.4.2/kube2nginx-linux-amd64 /usr/bin/kube2nginx
