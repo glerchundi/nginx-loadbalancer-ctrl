@@ -1,4 +1,4 @@
-FROM quay.io/justcontainers/base-alpine:v0.11.1
+FROM quay.io/justcontainers/base-alpine:v0.12.2
 MAINTAINER Gorka Lerchundi Osa <glertxundi@gmail.com>
 
 ##
@@ -6,7 +6,7 @@ MAINTAINER Gorka Lerchundi Osa <glertxundi@gmail.com>
 ##
 
 # nginx
-RUN apk-install ca-certificates nginx=1.8.1-r0
+RUN apk-install ca-certificates nginx=1.10.1-r1
 
 # kube2nginx
 ADD https://github.com/glerchundi/kube2nginx/releases/download/v0.4.2/kube2nginx-linux-amd64 /usr/bin/kube2nginx
