@@ -1,6 +1,6 @@
 #!/usr/bin/execlineb -P
 
-if { s6-mkdir -p /etc/nginx/certs }
+if { s6-mkdir -p /etc/nginx/certs/dh }
 if -t { s6-test ! -f /etc/nginx/certs/dh/dhparam.pem }
 if
 {
